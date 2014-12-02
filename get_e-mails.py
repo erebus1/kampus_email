@@ -20,6 +20,7 @@ def get_emails(f):
                 res["pas"] = v['cell'][7]  # save password
                 res["login"] = v['cell'][6]  # save login
                 res["e-mail"] = auth.main(v['cell'][6], v['cell'][7].encode('utf-8'))  # extract e-mail
+                print(res["e-mail"])
                 # '.encode' because of russian passwords
                 result.append(res)  # save result in 'result'
                 c += 1
